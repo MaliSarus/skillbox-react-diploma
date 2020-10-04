@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ddbb95e-bedb-4f33-89cd-0e8e05e508c9" name="Default Changelist" comment="" />
+    <list default="true" id="7ddbb95e-bedb-4f33-89cd-0e8e05e508c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Detail/Detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Post/Body/Body.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Post/Title/Title.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post/Body/Body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/Body/Body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post/Footer/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post/Title/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/Title/Title.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -36,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -46,9 +60,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Саша\WebstormProjects\diploma\src" />
     </key>
@@ -80,6 +97,15 @@
       <updated>1601642260830</updated>
       <workItem from="1601642264988" duration="2261000" />
       <workItem from="1601647256219" duration="3070000" />
+      <workItem from="1601660739104" duration="623000" />
+      <workItem from="1601661375159" duration="6246000" />
+      <workItem from="1601712362248" duration="624000" />
+      <workItem from="1601713708474" duration="4090000" />
+      <workItem from="1601739209214" duration="1194000" />
+      <workItem from="1601754886507" duration="1713000" />
+      <workItem from="1601794767769" duration="16000" />
+      <workItem from="1601794798155" duration="2535000" />
+      <workItem from="1601825720243" duration="1005000" />
     </task>
     <task id="LOCAL-00001" summary="Init Repo">
       <created>1601650320270</created>
@@ -103,6 +129,26 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1601650319079" />
+    <state width="1899" height="264" key="GridCell.Tab.0.bottom" timestamp="1601661362881">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1601661362881" />
+    <state width="1899" height="264" key="GridCell.Tab.0.center" timestamp="1601661362881">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="264" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1601661362881" />
+    <state width="1899" height="264" key="GridCell.Tab.0.left" timestamp="1601661362881">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="264" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1601661362881" />
+    <state width="1899" height="264" key="GridCell.Tab.0.right" timestamp="1601661362881">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="264" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1601661362881" />
+    <state x="461" y="167" key="SettingsEditor" timestamp="1601713684745">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601713684745" />
     <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1601650328403">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

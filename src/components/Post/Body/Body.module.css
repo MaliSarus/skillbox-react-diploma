@@ -1,0 +1,6 @@
+.Body img{
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    max-width: 100%;
+}
