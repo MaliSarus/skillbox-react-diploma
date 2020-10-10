@@ -1,18 +1,21 @@
-import * as actionType from './actions'
 
+import * as actionType from './actions'
 const initialState = {
     posts: [],
     // authUrl: null
 }
 
-const getVisibleTodos = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionType.SET_AUTH_URL:
-            // return {
-            //     ...state,
-            //     authUrl: action.url
-            // }
+        case actionType.ADD_POSTS:
+            const oldPosts = [...state.posts];
+            const updatedPosts = oldPosts.concat(action.posts)
+            return {
+                posts: updatedPosts
+            }
         default:
             return state;
     }
 }
+
+export default reducer;

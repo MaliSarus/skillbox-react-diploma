@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import Posts from "../../components/Posts/Posts";
 import {toJson} from "unsplash-js/lib/unsplash";
 import InfiniteScroll from "react-infinite-scroll-component";
+import {connect} from "react-redux";
 
 
 class Main extends Component{
     state = {
-        posts: [],
+        // posts: [],
         page: 1
     }
     componentDidMount() {
@@ -33,7 +34,7 @@ class Main extends Component{
         this.props.unsplash.photos.listPhotos(this.state.page, 30, "latest")
             .then(toJson)
             .then(posts => {
-                const myPosts = [...this.state.posts];
+                const myPosts = [];
                 for (let post of posts) {
                     const newPost = {
                         postId: post.id,
@@ -47,10 +48,8 @@ class Main extends Component{
                     }
                     myPosts.push(newPost)
                 }
-                this.setState({
-                    posts: myPosts,
-                    page: this.state.page + 1
-                })
+                this.setState({page: this.state.page + 1})
+                this.props.onAddPosts(myPosts)
             });
     }
 
@@ -63,7 +62,6 @@ class Main extends Component{
     }
     render() {
 
-
         return (
             <main>
                 <InfiniteScroll
@@ -73,7 +71,7 @@ class Main extends Component{
                     dataLength="30"
                 >
                 <Posts
-                    posts={this.state.posts}
+                    posts={this.props.posts}
                     writeLike={this.likePhotoHandler}
                 />
                 </InfiniteScroll>
@@ -83,4 +81,14 @@ class Main extends Component{
 
 }
 
-export default Main
+const mapStateToProps = state => {
+    return {
+        posts: state.posts
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return{
+        onAddPosts: (posts) => {dispatch({type: 'ADD_POSTS', posts})}
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Main)

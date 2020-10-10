@@ -1,1 +1,1 @@
-export const SET_AUTH_URL = 'SET_AUTH_URL'
+export const ADD_POSTS = 'ADD_POSTS'
