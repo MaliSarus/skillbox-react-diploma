@@ -40,6 +40,7 @@ class Main extends Component{
                         postId: post.id,
                         postPhoto: post.urls.small,
                         likes: post.likes,
+                        date: post.created_at,
                         user: {
                             name: post.user.first_name,
                             link: post.user.links.html,
@@ -48,6 +49,7 @@ class Main extends Component{
                     }
                     myPosts.push(newPost)
                 }
+                console.log(posts);
                 this.setState({page: this.state.page + 1})
                 this.props.onAddPosts(myPosts)
             });

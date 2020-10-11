@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7ddbb95e-bedb-4f33-89cd-0e8e05e508c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts/Post/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts/Post/Post.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts/Post/Post.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts/Posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reduser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,8 @@
       <workItem from="1601825720243" duration="1995000" />
       <workItem from="1601925341166" duration="5837000" />
       <workItem from="1601992127448" duration="1462000" />
-      <workItem from="1602324745493" duration="4852000" />
+      <workItem from="1602324745493" duration="5624000" />
+      <workItem from="1602435065554" duration="2752000" />
     </task>
     <task id="LOCAL-00001" summary="Init Repo">
       <created>1601650320270</created>
@@ -128,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602326863257</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add redux for posts">
+      <created>1602329745972</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602329745972</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,14 +144,15 @@
     <MESSAGE value="Init Repo" />
     <MESSAGE value="add some functional" />
     <MESSAGE value="add signIn button and like functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="add signIn button and like functionality" />
+    <MESSAGE value="add redux for posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="add redux for posts" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="30" key="CommitChangelistDialog2" timestamp="1602326862219">
+    <state x="583" y="30" key="CommitChangelistDialog2" timestamp="1602329745270">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1601650319079" />
-    <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1602326862219" />
+    <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1602329745270" />
     <state width="1899" height="264" key="GridCell.Tab.0.bottom" timestamp="1601661362881">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -166,10 +173,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601713684745" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1602327027579">
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1602329773323">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1601650328403" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602327027579" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602329773323" />
   </component>
 </project>

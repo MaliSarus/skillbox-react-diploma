@@ -6,6 +6,9 @@ import classes from "./Post.module.css"
 import {toJson} from "unsplash-js/lib/unsplash";
 
 const Post = (props) => {
+    const regDate = new Date(props.date);
+    const regDateString = ('0' + regDate.getDate()).slice(-2) + '.' + ('0' + regDate.getMonth()).slice(-2) + '.' + regDate.getFullYear();
+
     return (
         <li className={classes.Post} onClick={() => {console.log('post')}}>
             <div className={classes.Head}>
@@ -13,7 +16,7 @@ const Post = (props) => {
                     <span className={classes.Image}><img src={props.user.photo} alt=""/></span>
                     {props.user.name}
                 </a>
-                <div className={classes.Date}>15.02.2020</div>
+                <div className={classes.Date}>{regDateString}</div>
             </div>
             <div className={classes.Body}><img src={props.image} alt=""/></div>
             <div className={classes.Footer}>

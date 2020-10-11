@@ -12,6 +12,7 @@ const Posts = (props) => {
                 image={post.postPhoto}
                 user={post.user}
                 likes={post.likes}
+                date={post.date}
                 writelike={() => {props.writeLike(post.postId)}}
             />
         )
