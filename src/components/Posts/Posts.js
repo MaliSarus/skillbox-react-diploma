@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "../../containers/App.module.css";
-import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "./Post/Post";
 
 const Posts = (props) => {
