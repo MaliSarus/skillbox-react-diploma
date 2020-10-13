@@ -7,6 +7,11 @@ export const unsplash = new Unsplash({
 });
 
 export const authenticationUrl = unsplash.auth.getAuthenticationUrl([
+    "public",
+    "read_user",
+    "write_user",
+    "read_photos",
+    "write_photos",
     "write_likes"
 ]);
 

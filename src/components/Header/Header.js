@@ -4,6 +4,8 @@ import logo from '../../logo.svg'
 import {Link} from "react-router-dom";
 import {connect} from 'react-redux'
 import * as actionCreators from "../../store/actionCreators/actionCreators";
+import {unsplash} from "../../unsplash";
+import {toJson} from "unsplash-js/lib/unsplash";
 
 class Header extends Component {
     // state = {
@@ -12,6 +14,7 @@ class Header extends Component {
 
     componentDidMount() {
         this.props.onCheckAuth()
+
     }
 
     render() {
@@ -21,6 +24,11 @@ class Header extends Component {
             </div>
         )
         if (this.props.isAuth){
+            unsplash.currentUser.profile()
+                .then(toJson)
+                .then(json => {
+                    console.log(json)
+                });
             logInButton = null
         }
         return (
