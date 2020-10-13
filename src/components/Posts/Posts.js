@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "../../containers/App.module.css";
-import Post from "./Post/Post";
+import Post from "../../containers/Post/Post";
 
 const Posts = (props) => {
     const postsElement = props.posts.map(post => {
@@ -12,7 +12,6 @@ const Posts = (props) => {
                 user={post.user}
                 likes={post.likes}
                 date={post.date}
-                writelike={() => {props.writeLike(post.postId)}}
             />
         )
     })

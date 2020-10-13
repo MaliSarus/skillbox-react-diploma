@@ -10,18 +10,27 @@ export const authenticationUrl = unsplash.auth.getAuthenticationUrl([
     "write_likes"
 ]);
 
-if (window.location.search !== "") {
-    let code = "";
-    const query = new URLSearchParams(window.location.search);
-    for (let param of query.entries()) {
-        if (param[0] === "code") {
-            code = param[1];
+export const checkAuth = () => {
+    if (window.location.search !== "") {
+        let code = "";
+        const query = new URLSearchParams(window.location.search);
+        for (let param of query.entries()) {
+            if (param[0] === "code") {
+                code = param[1];
+
+            }
         }
+
+        return unsplash.auth.userAuthentication(code)
+            .then(toJson)
+            .then(json => {
+                unsplash.auth.setBearerToken(json.access_token);
+                return true;
+            })
+        // console.log(result);
+        // return result
+    } else {
+        return false;
     }
-    unsplash.auth.userAuthentication(code)
-        .then(toJson)
-        .then(json => {
-            console.log(json.access_token)
-            unsplash.auth.setBearerToken(json.access_token);
-        })
+
 }

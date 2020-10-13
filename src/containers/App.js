@@ -3,6 +3,8 @@ import classes from './App.module.css';
 import Header from "../components/Header/Header";
 import Main from "./Main/Main";
 import {authenticationUrl} from "../unsplash";
+import {connect} from 'react-redux'
+import * as actionCreators from "../store/actionCreators/actionCreators";
 
 class App extends Component {
 
@@ -21,4 +23,17 @@ class App extends Component {
     }
 }
 
-export default App;
+const mapStateToProps = state => {
+    return {
+        isAuth: state.isAuth
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return {
+        onCheckAuth: () => {
+            dispatch(actionCreators.checkAuthAsync)
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

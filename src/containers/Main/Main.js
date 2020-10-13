@@ -5,7 +5,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import {connect} from "react-redux";
 import {unsplash} from "../../unsplash";
 import {Switch, Route} from 'react-router-dom'
-import Detail from "../../components/Posts/Detail/Detail";
+import Detail from "../Detail/Detail";
+import * as actionCreators from '../../store/actionCreators/actionCreators'
 
 
 class Main extends Component {
@@ -42,13 +43,6 @@ class Main extends Component {
             });
     }
 
-    likePhotoHandler = (id) => {
-        unsplash.photos.likePhoto(id)
-            .then(toJson)
-            .then(json => {
-                console.log(json)
-            });
-    }
 
     render() {
 
@@ -65,7 +59,6 @@ class Main extends Component {
                         >
                             <Posts
                                 posts={this.props.posts}
-                                writeLike={this.likePhotoHandler}
                             />
                         </InfiniteScroll>
                     )}/>
@@ -84,7 +77,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onAddPosts: (posts) => {
-            dispatch({type: 'ADD_POSTS', posts})
+            dispatch(actionCreators.addPost(posts))
         }
     }
 }

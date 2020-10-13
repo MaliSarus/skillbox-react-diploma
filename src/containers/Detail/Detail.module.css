@@ -1,0 +1,53 @@
+.Detail{
+    display: flex;
+}
+
+.Image{
+    flex-basis: 60%;
+    flex-wrap: wrap;
+    height: 70vh;
+
+}
+.Image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+}
+
+.Desc{
+    flex-basis: 40%;
+    padding-left: 20px;
+    text-align: left;
+}
+.Head{
+    margin-bottom: 40px;
+}
+.Head .User{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.Head .Image{
+    flex-basis: 60px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px #2b2b2b solid;
+    margin-right: 10px;
+}
+
+.Head .Image img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.Text{
+    color: #ccc;
+}
