@@ -1,8 +1,6 @@
 import React, {Component} from "react";
-import likeIcon from '../../assets/icons/like.svg'
-import Like_disabled from '../../assets/icons/like_disabled.svg'
 import {Link} from "react-router-dom";
-
+import Like from "../../components/UI/Like/Like";
 import classes from "./Post.module.css"
 import {unsplash} from "../../unsplash";
 import {toJson} from "unsplash-js";
@@ -13,7 +11,7 @@ class Post extends Component {
     }
     likePhotoHandler = (id) => {
         if (this.state.like) {
-            unsplash.photos.unlikePhoto("mtNweauBsMQ")
+            unsplash.photos.unlikePhoto(id)
                 .then(toJson)
                 .then(json => {
                     this.setState({like: false})
@@ -45,15 +43,11 @@ class Post extends Component {
                     <div className={classes.Body}><img src={this.props.image} alt=""/></div>
                 </Link>
                 <div className={classes.Footer}>
-                    <div
-                        className={classes.Like}
-                        onClick={() => {
-                            this.likePhotoHandler(this.props.id)
-                        }}
-
-                    >
-                        <img src={!this.state.like ? likeIcon : Like_disabled} alt=""/>
-                    </div>
+                    <Like
+                        class={classes.Like}
+                        like={()=>{this.likePhotoHandler(this.props.id)}}
+                        isLiked={this.state.like}
+                    />
                     <span>{this.props.likes}</span>
                 </div>
             </li>

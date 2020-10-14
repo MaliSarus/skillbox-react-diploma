@@ -1,0 +1,24 @@
+
+.Twitter, .Instagram {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-image .25s;
+}
+
+.Twitter{
+    background-image: url("/assets/icons/Twitter/twitter.svg");
+}
+.Twitter:hover{
+    background-image: url("/assets/icons/Twitter/twitter_hover.svg");
+}
+
+.Instagram{
+    background-image: url("/assets/icons/Instagram/instagram.svg");
+}
+.Instagram:hover{
+    background-image: url("/assets/icons/Instagram/instagram_hover.svg");
+}

@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ddbb95e-bedb-4f33-89cd-0e8e05e508c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/Instagram/instagram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/Instagram/instagram_hover.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/Twitter/twitter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/Twitter/twitter_hover.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Like/Like.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Like/Like.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Social/Social.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Social/Social.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/like.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/Like/like.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/like_disabled.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/Like/like_disabled.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Detail/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Detail/Detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Detail/Detail.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Detail/Detail.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Post/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Post/Post.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Post/Post.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reduser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/unsplash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/unsplash.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -41,7 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/icons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/icons/Instagramm" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -55,12 +74,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Саша\WebstormProjects\diploma\src\containers" />
-      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\components\Posts" />
+      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\public\assets\icons" />
+      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons\Twitter" />
+      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons\Like" />
       <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\containers" />
-      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\components" />
+      <recent name="C:\Users\Саша\WebstormProjects\diploma\src\containers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons\Instagramm" />
       <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons" />
       <recent name="C:\Users\Саша\WebstormProjects\diploma\src" />
     </key>
@@ -110,6 +131,9 @@
       <workItem from="1602579180371" duration="3786000" />
       <workItem from="1602591243539" duration="6183000" />
       <workItem from="1602599626590" duration="1098000" />
+      <workItem from="1602610586529" duration="3766000" />
+      <workItem from="1602664630682" duration="4937000" />
+      <workItem from="1602695436113" duration="4050000" />
     </task>
     <task id="LOCAL-00001" summary="Init Repo">
       <created>1601650320270</created>
@@ -176,26 +200,30 @@
     <state x="-1337" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1602508333000" />
     <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602600390668" />
     <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1602329745270" />
-    <state width="1899" height="264" key="GridCell.Tab.0.bottom" timestamp="1602490932755">
+    <state width="1882" height="261" key="GridCell.Tab.0.bottom" timestamp="1602628568861">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602490932755" />
-    <state width="1899" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1601661362881" />
-    <state width="1899" height="264" key="GridCell.Tab.0.center" timestamp="1602490932755">
+    <state width="1882" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602628568861" />
+    <state width="1882" height="261" key="GridCell.Tab.0.center" timestamp="1602628568861">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602490932755" />
-    <state width="1899" height="264" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1601661362881" />
-    <state width="1899" height="264" key="GridCell.Tab.0.left" timestamp="1602490932755">
+    <state width="1882" height="261" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602628568861" />
+    <state width="1882" height="261" key="GridCell.Tab.0.left" timestamp="1602628568861">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602490932755" />
-    <state width="1899" height="264" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1601661362881" />
-    <state width="1899" height="264" key="GridCell.Tab.0.right" timestamp="1602490932755">
+    <state width="1882" height="261" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602628568861" />
+    <state width="1882" height="261" key="GridCell.Tab.0.right" timestamp="1602628568861">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602490932755" />
-    <state width="1899" height="264" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1601661362881" />
+    <state width="1882" height="261" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602628568861" />
+    <state x="692" y="150" key="RollbackChangesDialog" timestamp="1602625200681">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="692" y="150" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1602625200681" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1601713684745">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

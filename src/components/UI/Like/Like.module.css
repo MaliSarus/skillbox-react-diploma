@@ -1,0 +1,9 @@
+.Like {
+    cursor: pointer;
+    height: 25px;
+    margin-right: 15px;
+}
+
+.Like img {
+    height: 100%;
+}

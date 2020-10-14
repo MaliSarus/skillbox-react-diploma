@@ -1,8 +1,8 @@
-
 import * as actionType from './actions'
+
 const initialState = {
     posts: [],
-    isAuth: false
+    isAuth: null
     // authUrl: null
 }
 
@@ -16,9 +16,11 @@ const reducer = (state = initialState, action) => {
                 posts: updatedPosts
             }
         case actionType.CHECK_AUTH:
+
+            let auth = action.val ? {...action.val} : null
             return {
                 ...state,
-                isAuth: action.val,
+                isAuth: auth,
             }
         default:
             return state;

@@ -14,7 +14,13 @@ class Header extends Component {
 
     componentDidMount() {
         this.props.onCheckAuth()
-
+        if (this.props.isAuth){
+            unsplash.currentUser.profile()
+                .then(toJson)
+                .then(data => {
+                   console.log(data)
+                });
+        }
     }
 
     render() {
@@ -24,11 +30,7 @@ class Header extends Component {
             </div>
         )
         if (this.props.isAuth){
-            unsplash.currentUser.profile()
-                .then(toJson)
-                .then(json => {
-                    console.log(json)
-                });
+            console.log('auth redux: ', this.props.isAuth)
             logInButton = null
         }
         return (

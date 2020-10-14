@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import classes from './App.module.css';
-import Header from "../components/Header/Header";
+import Header from "./Header/Header";
 import Main from "./Main/Main";
 import {authenticationUrl} from "../unsplash";
 import {connect} from 'react-redux'
