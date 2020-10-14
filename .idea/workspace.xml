@@ -2,28 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ddbb95e-bedb-4f33-89cd-0e8e05e508c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/icons/Instagram/instagram.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/icons/Instagram/instagram_hover.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/icons/Twitter/twitter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/icons/Twitter/twitter_hover.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Like/Like.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Like/Like.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Social/Social.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Social/Social.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/Portfolio/photo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/Portfolio/photo_hover.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/like.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/Like/like.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/like_disabled.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/Like/like_disabled.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Social/Social.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Social/Social.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Social/Social.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Social/Social.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Detail/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Detail/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Detail/Detail.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Detail/Detail.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Post/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Post/Post.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Post/Post.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reduser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unsplash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/unsplash.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/icons/Instagramm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/icons/Portfolio" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -81,6 +65,7 @@
       <recent name="C:\Users\Саша\WebstormProjects\diploma\src\containers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\public\assets\icons\Portfolio" />
       <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons\Instagramm" />
       <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons" />
       <recent name="C:\Users\Саша\WebstormProjects\diploma\src" />
@@ -133,7 +118,7 @@
       <workItem from="1602599626590" duration="1098000" />
       <workItem from="1602610586529" duration="3766000" />
       <workItem from="1602664630682" duration="4937000" />
-      <workItem from="1602695436113" duration="4050000" />
+      <workItem from="1602695436113" duration="4612000" />
     </task>
     <task id="LOCAL-00001" summary="Init Repo">
       <created>1601650320270</created>
@@ -177,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602600392371</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="create Detail page">
+      <created>1602699510616</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602699510616</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,15 +183,16 @@
     <MESSAGE value="add redux for posts" />
     <MESSAGE value="add redux and Router" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="create Detail page" />
+    <option name="LAST_COMMIT_MESSAGE" value="create Detail page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="30" key="CommitChangelistDialog2" timestamp="1602600390668">
+    <state x="583" y="30" key="CommitChangelistDialog2" timestamp="1602699509655">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1337" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1602508333000" />
     <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602600390668" />
-    <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1602329745270" />
+    <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1602699509655" />
     <state width="1882" height="261" key="GridCell.Tab.0.bottom" timestamp="1602628568861">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -228,12 +221,12 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601713684745" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1602600394184">
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1602699744182">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1368" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1602508336310" />
     <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602600394184" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602329773323" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602699744182" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1602511270481">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>

@@ -1,5 +1,5 @@
 
-.Twitter, .Instagram {
+.Twitter, .Instagram, .Portfolio {
     display: block;
     width: 25px;
     height: 25px;
@@ -21,4 +21,11 @@
 }
 .Instagram:hover{
     background-image: url("/assets/icons/Instagram/instagram_hover.svg");
+}
+
+.Portfolio{
+    background-image: url("/assets/icons/Portfolio/photo.svg");
+}
+.Portfolio:hover{
+    background-image: url("/assets/icons/Portfolio/photo_hover.svg");
 }

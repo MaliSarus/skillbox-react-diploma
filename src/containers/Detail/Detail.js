@@ -9,17 +9,18 @@ import Social from "../../components/UI/Social/Social";
 class Detail extends Component {
     state = {
         post: {
-            id:'',
+            id: '',
             image: '',
             desc: '',
             date: '',
-            likes:'',
+            likes: '',
             user: {
                 photo: '',
                 name: '',
                 link: '',
                 twitter: '',
-                instagram:'',
+                instagram: '',
+                portfolio: '',
             }
         },
         spinner: true,
@@ -44,6 +45,7 @@ class Detail extends Component {
                             link: json.user.links.html,
                             twitter: json.user.twitter_username,
                             instagram: json.user.instagram_username,
+                            portfolio: json.user.portfolio_url,
                         }
                     }
                     this.setState({
@@ -116,13 +118,18 @@ class Detail extends Component {
                     <div className={classes.Footer}>
                         <div className={classes.Likes}>
                             <Like
-                                like={()=>{this.likePhotoHandler(this.state.post.id)}}
+                                like={() => {
+                                    this.likePhotoHandler(this.state.post.id)
+                                }}
                                 isLiked={this.state.like}
                             />{this.state.post.likes}
                         </div>
                         <div className={classes.Socials}>
-                            {this.state.post.user.twitter ? <Social class="Twitter" href={this.state.post.user.twitter}/> : null}
-                            {this.state.post.user.instagram ? <Social class="Instagram" href={this.state.post.user.instagram}/> : null}
+                            <Social class="Portfolio" href={this.state.post.user.portfolio}/>
+                            {this.state.post.user.twitter ?
+                                <Social class="Twitter" href={this.state.post.user.twitter}/> : null}
+                            {this.state.post.user.instagram ?
+                                <Social class="Instagram" href={this.state.post.user.instagram}/> : null}
                         </div>
                     </div>
                 </div>

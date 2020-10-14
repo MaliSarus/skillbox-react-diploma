@@ -10,6 +10,9 @@ const Social = (props) => {
         case 'Instagram':
             href = `https://instagram.com/${props.href}`;
             break;
+        case 'Portfolio':
+            href = props.href;
+            break;
         default:
             href = props.href
     }
