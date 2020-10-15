@@ -8,19 +8,12 @@ import {unsplash} from "../../unsplash";
 import {toJson} from "unsplash-js/lib/unsplash";
 
 class Header extends Component {
-    // state = {
-    //     auth: false
-    // }
+    state = {
+        user: ''
+    }
 
     componentDidMount() {
-        this.props.onCheckAuth()
-        if (this.props.isAuth){
-            unsplash.currentUser.profile()
-                .then(toJson)
-                .then(data => {
-                   console.log(data)
-                });
-        }
+        this.props.onCheckAuth();
     }
 
     render() {
@@ -29,9 +22,20 @@ class Header extends Component {
                 <button className="btn btn-primary" onClick={this.props.logIn}>Вход</button>
             </div>
         )
-        if (this.props.isAuth){
-            console.log('auth redux: ', this.props.isAuth)
-            logInButton = null
+        if (this.props.isAuth) {
+            logInButton = (
+                <div className="col-5 d-flex align-items-center justify-content-end">
+                    {this.state.user}
+                </div>
+            )
+            unsplash.currentUser.profile()
+                .then(toJson)
+                .then(data => {
+                    console.log(data.username)
+                    this.setState({
+                        user: data.username,
+                    })
+                });
         }
         return (
             <header className={classes.Header}>

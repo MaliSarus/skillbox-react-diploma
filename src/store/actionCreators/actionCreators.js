@@ -1,5 +1,6 @@
 import * as actionTypes from '../actions'
-import {checkAuth} from "../../unsplash";
+import {checkAuth, unsplash} from "../../unsplash";
+import {toJson} from "unsplash-js/lib/unsplash";
 
 export const addPost = (posts) => {
     return {
@@ -9,12 +10,21 @@ export const addPost = (posts) => {
 }
 
 export const checkAuthAsync = () => {
-    let isAuth = false;
-    checkAuth(isAuth);
-    // console.log('isAuth:',isAuth);
-
-    return dispatch => {
-        dispatch(checkAuthSync(isAuth))
+    const token = checkAuth();
+    if (token){
+        return dispatch => {
+            unsplash.auth.userAuthentication(token)
+                .then(toJson)
+                .then(json => {
+                    unsplash.auth.setBearerToken(json.access_token);
+                    dispatch(checkAuthSync(true))
+                });
+        }
+    }
+    else{
+        return dispatch => {
+            dispatch(checkAuthSync(false))
+        }
     }
 }
 

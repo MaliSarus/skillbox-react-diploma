@@ -15,7 +15,7 @@ export const authenticationUrl = unsplash.auth.getAuthenticationUrl([
     "write_likes"
 ]);
 
-export const checkAuth = (result) => {
+export const checkAuth = () => {
     if (window.location.search !== "") {
         let code = "";
         const query = new URLSearchParams(window.location.search);
@@ -25,16 +25,10 @@ export const checkAuth = (result) => {
 
             }
         }
-
-         unsplash.auth.userAuthentication(code)
-            .then(toJson)
-            .then(json => {
-                unsplash.auth.setBearerToken(json.access_token);
-                result = true
-            })
-        // return result
-    } else {
-        result = false;
+        return code;
+    }
+    else{
+        return  false;
     }
 
 }

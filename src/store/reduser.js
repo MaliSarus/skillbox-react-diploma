@@ -17,7 +17,7 @@ const reducer = (state = initialState, action) => {
             }
         case actionType.CHECK_AUTH:
 
-            let auth = action.val ? {...action.val} : null
+            let auth = action.val ? action.val : null;
             return {
                 ...state,
                 isAuth: auth,
