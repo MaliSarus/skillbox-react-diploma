@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "../../containers/App.module.css";
+import classes from "./Posts.module.scss";
 import Post from "../../containers/Post/Post";
 
 const Posts = (props) => {
@@ -19,7 +19,7 @@ const Posts = (props) => {
         <div className="container">
             <div className="row">
                 <div className="col-12 col-md-8 offset-md-2">
-                    <div className="posts" style={{paddingTop: '150px'}}>
+                    <div className={classes.Posts} style={{paddingTop: '150px'}}>
                         <ul>
                                 {postsElement}
                         </ul>

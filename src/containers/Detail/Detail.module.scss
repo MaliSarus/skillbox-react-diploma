@@ -1,0 +1,125 @@
+.Detail {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.Image {
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  max-height: 70vh;
+  @media screen and (min-width: 768px) {
+    flex-basis: 60%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+}
+
+
+.Desc {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  padding: 20px;
+  text-align: left;
+  @media screen and (min-width: 768px) {
+    flex-basis: 40%;
+  }
+}
+
+.Head {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .User {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .Image {
+    flex-basis: 60px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px #2b2b2b solid;
+    margin-right: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+  .Date {
+    font-size: 14px;
+    color: #ccc;
+  }
+}
+
+.Text {
+  color: #2b2b2b;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.Footer {
+  display: flex;
+  flex-wrap: wrap;
+  .Likes, .Socials {
+    flex-basis: 50%;
+    @media screen and (min-width: 768px){
+      flex-basis: 100%
+    }
+    @media screen and (min-width: 992px){
+      flex-basis: 50%
+    }
+  }
+  .Likes {
+    display: flex;
+    align-items: center;
+    > div {
+      margin-right: 15px;
+    }
+  }
+  .Socials {
+    display: flex;
+    justify-content: flex-end;
+    @media screen and (min-width: 768px){
+      order: unset;
+    }
+    @media screen and (min-width: 768px){
+      order: -1;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: 992px){
+      margin-bottom: 0;
+      order: unset;
+      justify-content: flex-end;
+    }
+    > * {
+      margin-left: 15px;
+      @media screen and (min-width: 768px){
+        margin-right: 15px;
+        margin-left: 0;
+      }
+      @media screen and (min-width: 992px){
+        margin-left: 15px;
+        margin-right: 0;
+      }
+    }
+  }
+}

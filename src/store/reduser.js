@@ -2,7 +2,7 @@ import * as actionType from './actions'
 
 const initialState = {
     posts: [],
-    isAuth: null
+    authUser: null
     // authUrl: null
 }
 
@@ -20,7 +20,7 @@ const reducer = (state = initialState, action) => {
             let auth = action.val ? action.val : null;
             return {
                 ...state,
-                isAuth: auth,
+                authUser: auth,
             }
         default:
             return state;

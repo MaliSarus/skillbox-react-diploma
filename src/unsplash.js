@@ -22,7 +22,6 @@ export const checkAuth = () => {
         for (let param of query.entries()) {
             if (param[0] === "code") {
                 code = param[1];
-
             }
         }
         return code;

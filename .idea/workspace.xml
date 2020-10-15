@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ddbb95e-bedb-4f33-89cd-0e8e05e508c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Posts/Posts.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts/Posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Detail/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Detail/Detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Detail/Detail.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Detail/Detail.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reduser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unsplash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/unsplash.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +22,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -44,7 +49,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/icons/Portfolio" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -122,6 +127,7 @@
       <workItem from="1602763917586" duration="875000" />
       <workItem from="1602768096543" duration="1928000" />
       <workItem from="1602773233031" duration="554000" />
+      <workItem from="1602792075492" duration="2439000" />
     </task>
     <task id="LOCAL-00001" summary="Init Repo">
       <created>1601650320270</created>
@@ -198,32 +204,32 @@
     <option name="LAST_COMMIT_MESSAGE" value="fix createAction" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="30" key="CommitChangelistDialog2" timestamp="1602772109760">
+    <state x="583" y="30" key="CommitChangelistDialog2" timestamp="1602794532042">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1337" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1602508333000" />
     <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602772109760" />
-    <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1602699509655" />
-    <state width="1882" height="261" key="GridCell.Tab.0.bottom" timestamp="1602628568861">
+    <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1602794532042" />
+    <state width="1899" height="263" key="GridCell.Tab.0.bottom" timestamp="1602792577484">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602490932755" />
-    <state width="1882" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602628568861" />
-    <state width="1882" height="261" key="GridCell.Tab.0.center" timestamp="1602628568861">
+    <state width="1899" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602792577484" />
+    <state width="1899" height="263" key="GridCell.Tab.0.center" timestamp="1602792577484">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602490932755" />
-    <state width="1882" height="261" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602628568861" />
-    <state width="1882" height="261" key="GridCell.Tab.0.left" timestamp="1602628568861">
+    <state width="1899" height="263" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602792577484" />
+    <state width="1899" height="263" key="GridCell.Tab.0.left" timestamp="1602792577484">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602490932755" />
-    <state width="1882" height="261" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602628568861" />
-    <state width="1882" height="261" key="GridCell.Tab.0.right" timestamp="1602628568861">
+    <state width="1899" height="263" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602792577484" />
+    <state width="1899" height="263" key="GridCell.Tab.0.right" timestamp="1602792577484">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602490932755" />
-    <state width="1882" height="261" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602628568861" />
+    <state width="1899" height="263" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602792577484" />
     <state x="692" y="150" key="RollbackChangesDialog" timestamp="1602759284786">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

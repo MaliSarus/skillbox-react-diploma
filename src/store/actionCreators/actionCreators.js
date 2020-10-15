@@ -11,13 +11,19 @@ export const addPost = (posts) => {
 
 export const checkAuthAsync = () => {
     const token = checkAuth();
+    console.log(token);
     if (token){
         return dispatch => {
             unsplash.auth.userAuthentication(token)
                 .then(toJson)
                 .then(json => {
                     unsplash.auth.setBearerToken(json.access_token);
-                    dispatch(checkAuthSync(true))
+                    unsplash.currentUser.profile()
+                        .then(toJson)
+                        .then(data => {
+                            dispatch(checkAuthSync(data.username))
+                        });
+
                 });
         }
     }

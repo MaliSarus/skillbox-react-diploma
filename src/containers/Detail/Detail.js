@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {unsplash} from "../../unsplash";
 import {toJson} from "unsplash-js/lib/unsplash";
-import classes from './Detail.module.css'
+import classes from './Detail.module.scss'
 import Spinner from "../../components/UI/Spinner/Spinner";
 import Like from "../../components/UI/Like/Like";
 import Social from "../../components/UI/Social/Social";
@@ -32,7 +32,6 @@ class Detail extends Component {
             unsplash.photos.getPhoto(this.props.match.params.id)
                 .then(toJson)
                 .then(json => {
-                    console.log(json)
                     const singlePost = {
                         id: json.id,
                         image: json.urls.regular,
@@ -61,7 +60,6 @@ class Detail extends Component {
             unsplash.photos.unlikePhoto(id)
                 .then(toJson)
                 .then(json => {
-                    console.log(json);
                     const updatedLike = json.photo.likes;
                     const updatedPost = {...this.state.post};
                     updatedPost.likes = updatedLike;
