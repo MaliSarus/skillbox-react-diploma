@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import classes from './Header.module.css'
+import classes from './Header.module.scss'
 import logo from '../../logo.svg'
 import {Link} from "react-router-dom";
 import {connect} from 'react-redux'

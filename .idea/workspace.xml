@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7ddbb95e-bedb-4f33-89cd-0e8e05e508c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reduser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unsplash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/unsplash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +120,8 @@
       <workItem from="1602695436113" duration="4612000" />
       <workItem from="1602757215031" duration="2056000" />
       <workItem from="1602763917586" duration="875000" />
-      <workItem from="1602768096543" duration="1666000" />
+      <workItem from="1602768096543" duration="1928000" />
+      <workItem from="1602773233031" duration="554000" />
     </task>
     <task id="LOCAL-00001" summary="Init Repo">
       <created>1601650320270</created>
@@ -172,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602699510616</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix createAction">
+      <created>1602772111068</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602772111068</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,14 +194,15 @@
     <MESSAGE value="add redux and Router" />
     <MESSAGE value="fixes" />
     <MESSAGE value="create Detail page" />
-    <option name="LAST_COMMIT_MESSAGE" value="create Detail page" />
+    <MESSAGE value="fix createAction" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix createAction" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="30" key="CommitChangelistDialog2" timestamp="1602699509655">
+    <state x="583" y="30" key="CommitChangelistDialog2" timestamp="1602772109760">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1337" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1602508333000" />
-    <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602600390668" />
+    <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602772109760" />
     <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1602699509655" />
     <state width="1882" height="261" key="GridCell.Tab.0.bottom" timestamp="1602628568861">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -225,11 +233,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601713684745" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1602699744182">
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1602772113196">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1368" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1602508336310" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602600394184" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602772113196" />
     <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602699744182" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1602511270481">
       <screen x="-1920" y="0" width="1920" height="1050" />
