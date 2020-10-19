@@ -7,21 +7,23 @@ import {toJson} from "unsplash-js";
 
 class Post extends Component {
     state = {
-        like: false
+        like: false,
+        likes: this.props.likes
     }
     likePhotoHandler = (id) => {
         if (this.state.like) {
             unsplash.photos.unlikePhoto(id)
                 .then(toJson)
                 .then(json => {
-                    this.setState({like: false})
+                    const updatedLike = json.photo.likes;
+                    this.setState({like: false, likes: updatedLike})
                 });
         } else {
             unsplash.photos.likePhoto(id)
                 .then(toJson)
                 .then(json => {
-                    console.log(json)
-                    this.setState({like: true})
+                    const updatedLike = json.photo.likes;
+                    this.setState({like: true, likes: updatedLike})
                 });
 
         }
@@ -48,7 +50,7 @@ class Post extends Component {
                         like={()=>{this.likePhotoHandler(this.props.id)}}
                         isLiked={this.state.like}
                     />
-                    <span>{this.props.likes}</span>
+                    <span>{this.state.likes}</span>
                 </div>
             </li>
         )

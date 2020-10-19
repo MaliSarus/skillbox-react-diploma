@@ -17,7 +17,7 @@ const Social = (props) => {
             href = props.href
     }
     return (
-        <a className={classes[props.class]} href={href}/>
+        <a className={classes[props.class]} title={props.class} href={href}/>
     )
 }
 

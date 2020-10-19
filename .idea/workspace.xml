@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ddbb95e-bedb-4f33-89cd-0e8e05e508c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Posts/Posts.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts/Posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Detail/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Detail/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Detail/Detail.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Detail/Detail.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Social/Social.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Social/Social.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Social/Social.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Social/Social.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reduser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unsplash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/unsplash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Post/Post.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +125,8 @@
       <workItem from="1602768096543" duration="1928000" />
       <workItem from="1602773233031" duration="554000" />
       <workItem from="1602792075492" duration="2439000" />
+      <workItem from="1602834905459" duration="1798000" />
+      <workItem from="1602852313943" duration="1529000" />
     </task>
     <task id="LOCAL-00001" summary="Init Repo">
       <created>1601650320270</created>

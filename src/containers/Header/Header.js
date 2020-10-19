@@ -14,27 +14,27 @@ class Header extends Component {
 
     render() {
         let logInButton = (
-            <div className="col-5 d-flex align-items-center justify-content-end">
-                <button className="btn btn-primary" onClick={this.props.logIn}>Вход</button>
-            </div>
+            <button className={classes.Login_button} onClick={this.props.logIn}>Вход</button>
         )
         if (this.props.user) {
             logInButton = (
-                <div className="col-5 d-flex align-items-center justify-content-end">
-                    <p>Hello, <b>{this.props.user}</b></p>
-                </div>
+                <p style={{marginBottom: 0}}>Hello, <b>{this.props.user}</b></p>
             )
         }
         return (
             <header className={classes.Header}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-2 offset-5">
-                            <Link to="/">
-                                <img src={logo} alt=""/>
-                            </Link>
+                        <div className="col-4 offset-4 col-md-2 offset-md-5">
+                            <div className={classes.Logo}>
+                                <Link to="/">
+                                    <img src={logo} alt=""/>
+                                </Link>
+                            </div>
                         </div>
-                        {logInButton}
+                        <div className="col-4 col-md-5 d-flex align-items-center justify-content-end">
+                            {logInButton}
+                        </div>
                     </div>
                 </div>
             </header>

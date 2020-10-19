@@ -8,7 +8,33 @@
     top: 0;
     left: 0;
 
-    img {
-        padding: 5px;
+    .Logo{
+        height: 70px;
+        @media screen and (min-width: 768px){
+            height: 100px;
+        }
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            img {
+                padding: 5px;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+    .Login_button{
+        background: white;
+        border: 2px solid #2b2b2b;
+        border-radius: 5px;
+        padding: 5px 15px;
+        transition: color .2s, background-color .2s;
+        &:hover{
+            background: #2b2b2b;
+            color: white;
+        }
     }
 }
