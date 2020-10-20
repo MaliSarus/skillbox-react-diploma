@@ -9,9 +9,9 @@ import reducer from "./store/reduser";
 import * as serviceWorker from './serviceWorker';
 import thunk from 'redux-thunk'
 
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(reducer, applyMiddleware(thunk));
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
     <Router>

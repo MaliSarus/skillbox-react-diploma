@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7ddbb95e-bedb-4f33-89cd-0e8e05e508c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Social/Social.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Social/Social.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Social/Social.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Social/Social.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Post/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreators/actionCreators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reduser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/icons/Portfolio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vue-store" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -58,18 +58,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\public\assets\icons\Portfolio" />
+      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons\Instagramm" />
+      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons" />
+      <recent name="C:\Users\Саша\WebstormProjects\diploma\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\public\assets\icons" />
       <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons\Twitter" />
       <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons\Like" />
       <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\containers" />
       <recent name="C:\Users\Саша\WebstormProjects\diploma\src\containers" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\public\assets\icons\Portfolio" />
-      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons\Instagramm" />
-      <recent name="C:\Users\mali_sarus_idol\WebstormProjects\skillbox-react-diploma\src\assets\icons" />
-      <recent name="C:\Users\Саша\WebstormProjects\diploma\src" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -127,6 +127,11 @@
       <workItem from="1602792075492" duration="2439000" />
       <workItem from="1602834905459" duration="1798000" />
       <workItem from="1602852313943" duration="1529000" />
+      <workItem from="1603100723770" duration="2186000" />
+      <workItem from="1603120095401" duration="598000" />
+      <workItem from="1603179682957" duration="179000" />
+      <workItem from="1603190660048" duration="4456000" />
+      <workItem from="1603196776054" duration="1715000" />
     </task>
     <task id="LOCAL-00001" summary="Init Repo">
       <created>1601650320270</created>
@@ -184,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602772111068</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="auth functional fix">
+      <created>1603100925926</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1603100925926</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,15 +212,20 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="create Detail page" />
     <MESSAGE value="fix createAction" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix createAction" />
+    <MESSAGE value="auth functional fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth functional fix" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="30" key="CommitChangelistDialog2" timestamp="1602794532042">
+    <state x="583" y="30" key="CommitChangelistDialog2" timestamp="1603100923331">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1337" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1602508333000" />
-    <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602772109760" />
+    <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1603100923331" />
     <state x="583" y="30" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1602794532042" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1603179861820">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1603179861820" />
     <state width="1899" height="263" key="GridCell.Tab.0.bottom" timestamp="1602792577484">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -238,11 +255,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601713684745" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1602772113196">
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1603100940064">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1368" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1602508336310" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1602772113196" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1603100940064" />
     <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602699744182" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1602511270481">
       <screen x="-1920" y="0" width="1920" height="1050" />
