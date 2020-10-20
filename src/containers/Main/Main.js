@@ -23,6 +23,7 @@ class Main extends Component {
         unsplash.photos.listPhotos(this.state.page, 30, "latest")
             .then(toJson)
             .then(posts => {
+                console.log(posts);
                 const myPosts = [];
                 for (let post of posts) {
                     const newPost = {

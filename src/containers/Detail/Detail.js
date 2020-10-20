@@ -5,6 +5,8 @@ import classes from './Detail.module.scss'
 import Spinner from "../../components/UI/Spinner/Spinner";
 import Like from "../../components/UI/Like/Like";
 import Social from "../../components/UI/Social/Social";
+import {connect} from 'react-redux'
+import * as actionCreators from "../../store/actionCreators/actionCreators";
 
 class Detail extends Component {
     state = {
@@ -28,6 +30,30 @@ class Detail extends Component {
     }
 
     componentDidMount() {
+        if (this.props.detailPost){
+            if(this.props.detailPost.id === this.props.match.params.id){
+                const singlePostUser = {
+                    ...this.props.detailPost.user
+                };
+                const singlePost = {
+                    ...this.props.detailPost,
+                    user: singlePostUser
+                }
+                this.setState({
+                    post: singlePost,
+                    spinner: false,
+                })
+            }
+            else{
+                this.fetchPost();
+            }
+        }
+        else{
+            this.fetchPost();
+        }
+    }
+
+    fetchPost = () => {
         setTimeout(() => {
             unsplash.photos.getPhoto(this.props.match.params.id)
                 .then(toJson)
@@ -51,37 +77,36 @@ class Detail extends Component {
                         post: singlePost,
                         spinner: false,
                     })
+                    this.props.onSaveDetailPost(singlePost);
                 });
         }, 3000)
     }
 
     likePhotoHandler = (id) => {
         if (this.state.like) {
+            const updatedLike = this.state.post.likes + 1;
+            const updatedPost = {...this.state.post};
+            updatedPost.likes = updatedLike;
+            this.setState({
+                post: updatedPost,
+                like: false
+            })
             unsplash.photos.unlikePhoto(id)
                 .then(toJson)
                 .then(json => {
-                    const updatedLike = json.photo.likes;
-                    const updatedPost = {...this.state.post};
-                    updatedPost.likes = updatedLike;
-                    this.setState({
-                        post: updatedPost,
-                        like: false
-                    })
                 });
         } else {
+            const updatedLike = this.state.post.likes - 1;
+            const updatedPost = {...this.state.post};
+            updatedPost.likes = updatedLike;
+            this.setState({
+                post: updatedPost,
+                like: true
+            })
             unsplash.photos.likePhoto(id)
                 .then(toJson)
                 .then(json => {
-                    console.log(json);
-                    const updatedLike = json.photo.likes;
-                    const updatedPost = {...this.state.post};
-                    updatedPost.likes = updatedLike;
-                    this.setState({
-                        post: updatedPost,
-                        like: true
-                    })
                 });
-
         }
     }
 
@@ -98,46 +123,54 @@ class Detail extends Component {
             </div>
         );
         if (!this.state.spinner) {
-            content = (<div className={classes.Detail} style={{marginTop: '150px'}}>
-                <div className={classes.Image}>
-                    <img src={this.state.post.image} alt=""/>
+            content = (<div style={{
+                display: "flex",
+                height: '100%',
+                flexDirection: 'column'
+            }}>
+                <div className={classes.Text}>
+                    <p>{this.state.post.desc}</p>
                 </div>
-                <div className={classes.Desc}>
-                    <div className={classes.Head}>
-                        <a href={this.state.post.user.link} className={classes.User}>
-                            <span className={classes.Image}><img src={this.state.post.user.photo} alt=""/></span>
-                            {this.state.post.user.name}
-                        </a>
-                        <div className={classes.Date}>{regDateString}</div>
+                <div className={classes.Footer}>
+                    <div className={classes.Likes}>
+                        <Like
+                            like={() => {
+                                this.likePhotoHandler(this.state.post.id)
+                            }}
+                            isLiked={this.state.like}
+                        />{this.state.post.likes}
                     </div>
-                    <div className={classes.Text}>
-                        <p>{this.state.post.desc}</p>
-                    </div>
-                    <div className={classes.Footer}>
-                        <div className={classes.Likes}>
-                            <Like
-                                like={() => {
-                                    this.likePhotoHandler(this.state.post.id)
-                                }}
-                                isLiked={this.state.like}
-                            />{this.state.post.likes}
-                        </div>
-                        <div className={classes.Socials}>
-                            <Social class="Portfolio" href={this.state.post.user.portfolio}/>
-                            {this.state.post.user.twitter ?
-                                <Social class="Twitter" href={this.state.post.user.twitter}/> : null}
-                            {this.state.post.user.instagram ?
-                                <Social class="Instagram" href={this.state.post.user.instagram}/> : null}
-                        </div>
+                    <div className={classes.Socials}>
+                        <Social class="Portfolio" href={this.state.post.user.portfolio}/>
+                        {this.state.post.user.twitter ?
+                            <Social class="Twitter" href={this.state.post.user.twitter}/> : null}
+                        {this.state.post.user.instagram ?
+                            <Social class="Instagram" href={this.state.post.user.instagram}/> : null}
                     </div>
                 </div>
             </div>)
         }
+
+        const routeState = this.props.location.state;
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        {content}
+                        <div className={classes.Detail} style={{marginTop: '150px'}}>
+                            <div className={classes.Image}>
+                                <img src={this.state.spinner ? routeState.postPhoto : this.state.post.image} alt=""/>
+                            </div>
+                            <div className={classes.Desc}>
+                                <div className={classes.Head}>
+                                    <a href={routeState.user.link} className={classes.User}>
+                                        <span className={classes.Image}><img src={routeState.user.photo} alt=""/></span>
+                                        {routeState.user.name}
+                                    </a>
+                                    <div className={classes.Date}>{routeState.date}</div>
+                                </div>
+                                {content}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,4 +179,18 @@ class Detail extends Component {
     }
 }
 
-export default Detail
+const mapStateToProps = state => {
+    return {
+        detailPost: state.detailPost
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onSaveDetailPost: (post) => {
+            dispatch(actionCreators.saveDetailPost(post))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Detail)

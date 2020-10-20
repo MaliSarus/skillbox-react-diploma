@@ -12,18 +12,24 @@ class Post extends Component {
     }
     likePhotoHandler = (id) => {
         if (this.state.like) {
+            const updatedLike = this.state.likes + 1;
+            this.setState({like: false, likes: updatedLike})
             unsplash.photos.unlikePhoto(id)
                 .then(toJson)
                 .then(json => {
-                    const updatedLike = json.photo.likes;
-                    this.setState({like: false, likes: updatedLike})
+                })
+                .catch(err => {
+                    console.log(err)
                 });
         } else {
+            const updatedLike = this.state.likes - 1;
+            this.setState({like: true, likes: updatedLike})
             unsplash.photos.likePhoto(id)
                 .then(toJson)
                 .then(json => {
-                    const updatedLike = json.photo.likes;
-                    this.setState({like: true, likes: updatedLike})
+                })
+                .catch(err => {
+                    console.log(err)
                 });
 
         }
@@ -41,7 +47,14 @@ class Post extends Component {
                     </a>
                     <div className={classes.Date}>{regDateString}</div>
                 </div>
-                <Link to={'/photo/' + this.props.id}>
+                <Link to={{
+                    pathname: '/photo/' + this.props.id,
+                    state: {
+                        user: this.props.user,
+                        postPhoto: this.props.image,
+                        date: regDateString,
+                    }
+                }}>
                     <div className={classes.Body}><img src={this.props.image} alt=""/></div>
                 </Link>
                 <div className={classes.Footer}>

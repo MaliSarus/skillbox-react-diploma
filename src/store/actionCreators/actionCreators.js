@@ -10,26 +10,49 @@ export const addPost = (posts) => {
 }
 
 export const checkAuthAsync = () => {
-    const token = checkAuth();
-    console.log(token);
-    if (token){
-        return dispatch => {
-            unsplash.auth.userAuthentication(token)
-                .then(toJson)
-                .then(json => {
-                    unsplash.auth.setBearerToken(json.access_token);
-                    unsplash.currentUser.profile()
-                        .then(toJson)
-                        .then(data => {
-                            dispatch(checkAuthSync(data.username))
-                        });
+    let lsToken = localStorage.getItem('token');
+    let expirationDate = localStorage.getItem('tokenExpiration');
+    if (lsToken) {
+        if( new Date().getTime() > +expirationDate){
+            localStorage.removeItem('token');
+            localStorage.removeItem(('tokenExpiration'))
+            lsToken = undefined;
+            expirationDate = undefined;
+        }
+        else {
+            return dispatch => {
+                unsplash.auth.setBearerToken(localStorage.getItem('token'));
+                unsplash.currentUser.profile()
+                    .then(toJson)
+                    .then(data => {
+                        dispatch(checkAuthSync(data.username))
+                    });
 
-                });
+            }
         }
     }
-    else{
-        return dispatch => {
-            dispatch(checkAuthSync(false))
+    if(!lsToken) {
+        const token = checkAuth();
+        if (token) {
+            return dispatch => {
+                unsplash.auth.userAuthentication(token)
+                    .then(toJson)
+                    .then(json => {
+                        unsplash.auth.setBearerToken(json.access_token);
+                        localStorage.setItem('token', json.access_token);
+                        localStorage.setItem('tokenExpiration', new Date().getTime() + 100000);
+                        unsplash.currentUser.profile()
+                            .then(toJson)
+                            .then(data => {
+                                dispatch(checkAuthSync(data.username))
+                            });
+
+                    });
+            }
+        } else {
+            return dispatch => {
+                dispatch(checkAuthSync(false))
+            }
         }
     }
 }
@@ -38,5 +61,12 @@ export const checkAuthSync = (val) => {
     return {
         type: actionTypes.CHECK_AUTH,
         val
+    }
+}
+
+export const saveDetailPost = (post) => {
+    return {
+        type: actionTypes.SAVE_DETAIL_POST,
+        post
     }
 }

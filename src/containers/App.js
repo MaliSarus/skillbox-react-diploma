@@ -7,6 +7,9 @@ import {connect} from 'react-redux'
 import * as actionCreators from "../store/actionCreators/actionCreators";
 
 class App extends Component {
+    componentDidMount() {
+        this.props.onCheckAuth();
+    }
 
     onLogInHandler = (event) => {
         event.preventDefault();
@@ -23,16 +26,17 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        isAuth: state.isAuth
-    }
-}
+
 const mapDispatchToProps = dispatch => {
     return {
         onCheckAuth: () => {
-            dispatch(actionCreators.checkAuthAsync)
+            dispatch(actionCreators.checkAuthAsync())
         }
+    }
+}
+const mapStateToProps = state => {
+    return {
+        user: state.authUser
     }
 }
 

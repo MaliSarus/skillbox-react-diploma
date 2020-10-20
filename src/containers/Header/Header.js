@@ -4,13 +4,8 @@ import logo from '../../logo.svg'
 import {Link} from "react-router-dom";
 import {connect} from 'react-redux'
 import * as actionCreators from "../../store/actionCreators/actionCreators";
-import {unsplash} from "../../unsplash";
-import {toJson} from "unsplash-js/lib/unsplash";
 
 class Header extends Component {
-    componentDidMount() {
-        this.props.onCheckAuth();
-    }
 
     render() {
         let logInButton = (
@@ -47,12 +42,5 @@ const mapStateToProps = state => {
         user: state.authUser
     }
 }
-const mapDispatchToProps = dispatch => {
-    return {
-        onCheckAuth: () => {
-            dispatch(actionCreators.checkAuthAsync())
-        }
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps)(Header);
