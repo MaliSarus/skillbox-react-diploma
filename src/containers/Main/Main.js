@@ -23,7 +23,6 @@ class Main extends Component {
         unsplash.photos.listPhotos(this.state.page, 30, "latest")
             .then(toJson)
             .then(posts => {
-                console.log(posts);
                 const myPosts = [];
                 for (let post of posts) {
                     const newPost = {
@@ -31,6 +30,7 @@ class Main extends Component {
                         postPhoto: post.urls.small,
                         likes: post.likes,
                         date: post.created_at,
+                        liked: post.liked_by_user,
                         user: {
                             name: post.user.first_name,
                             link: post.user.links.html,

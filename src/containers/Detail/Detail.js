@@ -30,8 +30,9 @@ class Detail extends Component {
     }
 
     componentDidMount() {
-        if (this.props.detailPost){
-            if(this.props.detailPost.id === this.props.match.params.id){
+        if (this.props.detailPost) {
+            if (this.props.detailPost.id === this.props.match.params.id) {
+
                 const singlePostUser = {
                     ...this.props.detailPost.user
                 };
@@ -41,14 +42,13 @@ class Detail extends Component {
                 }
                 this.setState({
                     post: singlePost,
+                    like: singlePost.liked,
                     spinner: false,
                 })
-            }
-            else{
+            } else {
                 this.fetchPost();
             }
-        }
-        else{
+        } else {
             this.fetchPost();
         }
     }
@@ -58,12 +58,14 @@ class Detail extends Component {
             unsplash.photos.getPhoto(this.props.match.params.id)
                 .then(toJson)
                 .then(json => {
+                    console.log(json)
                     const singlePost = {
                         id: json.id,
                         image: json.urls.regular,
                         desc: json.alt_description,
                         date: json.created_at,
                         likes: json.likes,
+                        liked: json.liked_by_user,
                         user: {
                             photo: json.user.profile_image.medium,
                             name: json.user.first_name,
@@ -75,6 +77,7 @@ class Detail extends Component {
                     }
                     this.setState({
                         post: singlePost,
+                        like: singlePost.liked,
                         spinner: false,
                     })
                     this.props.onSaveDetailPost(singlePost);
@@ -84,7 +87,7 @@ class Detail extends Component {
 
     likePhotoHandler = (id) => {
         if (this.state.like) {
-            const updatedLike = this.state.post.likes + 1;
+            const updatedLike = this.state.post.likes - 1;
             const updatedPost = {...this.state.post};
             updatedPost.likes = updatedLike;
             this.setState({
@@ -96,7 +99,7 @@ class Detail extends Component {
                 .then(json => {
                 });
         } else {
-            const updatedLike = this.state.post.likes - 1;
+            const updatedLike = this.state.post.likes + 1;
             const updatedPost = {...this.state.post};
             updatedPost.likes = updatedLike;
             this.setState({
@@ -133,12 +136,16 @@ class Detail extends Component {
                 </div>
                 <div className={classes.Footer}>
                     <div className={classes.Likes}>
-                        <Like
-                            like={() => {
-                                this.likePhotoHandler(this.state.post.id)
-                            }}
-                            isLiked={this.state.like}
-                        />{this.state.post.likes}
+                        {this.props.authUser ?
+                            (<Like
+                                like={() => {
+                                    this.likePhotoHandler(this.state.post.id)
+                                }}
+                                isLiked={this.state.like}
+                            />)
+                            : 'Likes: '
+                        }
+                        {this.state.post.likes}
                     </div>
                     <div className={classes.Socials}>
                         <Social class="Portfolio" href={this.state.post.user.portfolio}/>
@@ -181,7 +188,8 @@ class Detail extends Component {
 
 const mapStateToProps = state => {
     return {
-        detailPost: state.detailPost
+        detailPost: state.detailPost,
+        authUser: state.authUser
     }
 }
 

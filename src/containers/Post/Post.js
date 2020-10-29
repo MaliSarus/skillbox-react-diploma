@@ -4,34 +4,31 @@ import Like from "../../components/UI/Like/Like";
 import classes from "./Post.module.css"
 import {unsplash} from "../../unsplash";
 import {toJson} from "unsplash-js";
+import {connect} from "react-redux";
 
 class Post extends Component {
     state = {
-        like: false,
-        likes: this.props.likes
+        like: this.props.liked,
+        likes: this.props.likes,
+        error: null
     }
     likePhotoHandler = (id) => {
         if (this.state.like) {
             const updatedLike = this.state.likes + 1;
-            this.setState({like: false, likes: updatedLike})
             unsplash.photos.unlikePhoto(id)
                 .then(toJson)
                 .then(json => {
                 })
-                .catch(err => {
-                    console.log(err)
-                });
+            this.setState({like: false, likes: updatedLike})
+
         } else {
             const updatedLike = this.state.likes - 1;
-            this.setState({like: true, likes: updatedLike})
+
             unsplash.photos.likePhoto(id)
                 .then(toJson)
                 .then(json => {
                 })
-                .catch(err => {
-                    console.log(err)
-                });
-
+            this.setState({like: true, likes: updatedLike})
         }
     }
 
@@ -58,16 +55,30 @@ class Post extends Component {
                     <div className={classes.Body}><img src={this.props.image} alt=""/></div>
                 </Link>
                 <div className={classes.Footer}>
-                    <Like
-                        class={classes.Like}
-                        like={()=>{this.likePhotoHandler(this.props.id)}}
-                        isLiked={this.state.like}
-                    />
-                    <span>{this.state.likes}</span>
+                    {this.props.authUser ?
+                        (<Like
+                            class={classes.Like}
+                            like={() => {
+                                this.likePhotoHandler(this.props.id)
+                            }}
+                            isLiked={this.state.like}
+                        />)
+                        : ('Likes: ')
+                    }
+
+                    <span style={!this.props.authUser ? {marginLeft: '15px'} : null}>
+                        {this.state.likes}
+                    </span>
                 </div>
             </li>
         )
     }
 }
 
-export default Post;
+const mapStateToProps = state => {
+    return {
+        authUser: state.authUser
+    }
+}
+
+export default connect(mapStateToProps)(Post);

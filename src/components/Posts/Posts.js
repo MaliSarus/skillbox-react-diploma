@@ -12,6 +12,7 @@ const Posts = (props) => {
                 user={post.user}
                 likes={post.likes}
                 date={post.date}
+                liked={post.liked}
             />
         )
     })
