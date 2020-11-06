@@ -14,7 +14,7 @@ class Post extends Component {
     }
     likePhotoHandler = (id) => {
         if (this.state.like) {
-            const updatedLike = this.state.likes + 1;
+            const updatedLike = this.state.likes - 1;
             unsplash.photos.unlikePhoto(id)
                 .then(toJson)
                 .then(json => {
@@ -22,8 +22,7 @@ class Post extends Component {
             this.setState({like: false, likes: updatedLike})
 
         } else {
-            const updatedLike = this.state.likes - 1;
-
+            const updatedLike = this.state.likes + 1;
             unsplash.photos.likePhoto(id)
                 .then(toJson)
                 .then(json => {

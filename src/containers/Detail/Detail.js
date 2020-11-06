@@ -90,26 +90,27 @@ class Detail extends Component {
             const updatedLike = this.state.post.likes - 1;
             const updatedPost = {...this.state.post};
             updatedPost.likes = updatedLike;
-            this.setState({
-                post: updatedPost,
-                like: false
-            })
             unsplash.photos.unlikePhoto(id)
                 .then(toJson)
                 .then(json => {
                 });
+            this.setState({
+                post: updatedPost,
+                like: false
+            })
         } else {
             const updatedLike = this.state.post.likes + 1;
             const updatedPost = {...this.state.post};
             updatedPost.likes = updatedLike;
-            this.setState({
-                post: updatedPost,
-                like: true
-            })
             unsplash.photos.likePhoto(id)
                 .then(toJson)
                 .then(json => {
                 });
+            this.setState({
+                post: updatedPost,
+                like: true
+            })
+
         }
     }
 

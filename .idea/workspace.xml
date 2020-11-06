@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7ddbb95e-bedb-4f33-89cd-0e8e05e508c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts/Posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Detail/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Detail/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Post/Post.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,6 +134,8 @@
       <workItem from="1603393246517" duration="750000" />
       <workItem from="1603529171652" duration="4097000" />
       <workItem from="1603973484503" duration="2856000" />
+      <workItem from="1604474496778" duration="754000" />
+      <workItem from="1604580398615" duration="361000" />
     </task>
     <task id="LOCAL-00001" summary="Init Repo">
       <created>1601650320270</created>
