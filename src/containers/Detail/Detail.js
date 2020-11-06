@@ -115,8 +115,6 @@ class Detail extends Component {
     }
 
     render() {
-        const regDate = new Date(this.state.post.date);
-        const regDateString = ('0' + regDate.getDate()).slice(-2) + '.' + ('0' + (regDate.getMonth() + 1)).slice(-2) + '.' + regDate.getFullYear();
         let content = (
             <div className={classes.Detail} style={{
                 paddingTop: '150px',

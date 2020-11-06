@@ -2,6 +2,13 @@ import * as actionTypes from '../actions'
 import {checkAuth, unsplash} from "../../unsplash";
 import {toJson} from "unsplash-js/lib/unsplash";
 
+export const getPosts = (page) => {
+    return async (dispatch, getState) => {
+        const result = await new Promise((resolve, reject) => resolve(dispatch(checkAuthAsync())))
+        console.log(result)
+    }
+
+}
 export const addPost = (posts) => {
     return {
         type: actionTypes.ADD_POSTS,
@@ -9,17 +16,22 @@ export const addPost = (posts) => {
     }
 }
 
+export const clearPosts = () => {
+    return {
+        type: actionTypes.CLEAR_POSTS,
+    }
+}
+
 export const checkAuthAsync = () => {
     let lsToken = localStorage.getItem('token');
     let expirationDate = localStorage.getItem('tokenExpiration');
     if (lsToken) {
-        if( new Date().getTime() > +expirationDate){
+        if (new Date().getTime() > +expirationDate) {
             localStorage.removeItem('token');
             localStorage.removeItem(('tokenExpiration'))
             lsToken = undefined;
             expirationDate = undefined;
-        }
-        else {
+        } else {
             return dispatch => {
                 unsplash.auth.setBearerToken(localStorage.getItem('token'));
                 unsplash.currentUser.profile()
@@ -31,7 +43,7 @@ export const checkAuthAsync = () => {
             }
         }
     }
-    if(!lsToken) {
+    if (!lsToken) {
         const token = checkAuth();
         if (token) {
             return dispatch => {

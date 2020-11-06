@@ -16,6 +16,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 posts: updatedPosts
             }
+        case  actionType.CLEAR_POSTS:
+            return {
+                ...state,
+                posts: []
+            }
         case actionType.CHECK_AUTH:
             let auth = action.val ? action.val : null;
             return {
