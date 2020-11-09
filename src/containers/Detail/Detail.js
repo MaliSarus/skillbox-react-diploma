@@ -31,7 +31,7 @@ class Detail extends Component {
 
     componentDidMount() {
         if (this.props.detailPost) {
-            if (this.props.detailPost.id === this.props.match.params.id) {
+            if (this.props.detailPost.id === this.props.match.params.id && this.props.detailPost.likes === this.props.location.state.likes) {
 
                 const singlePostUser = {
                     ...this.props.detailPost.user
@@ -115,6 +115,7 @@ class Detail extends Component {
     }
 
     render() {
+        const routeState = this.props.location.state;
         let content = (
             <div className={classes.Detail} style={{
                 paddingTop: '150px',
@@ -144,7 +145,7 @@ class Detail extends Component {
                             />)
                             : 'Likes: '
                         }
-                        {this.state.post.likes}
+                        {this.state.spinner ? routeState.likes : this.state.post.likes}
                     </div>
                     <div className={classes.Socials}>
                         <Social class="Portfolio" href={this.state.post.user.portfolio}/>
@@ -157,7 +158,7 @@ class Detail extends Component {
             </div>)
         }
 
-        const routeState = this.props.location.state;
+
         return (
             <div className="container">
                 <div className="row">

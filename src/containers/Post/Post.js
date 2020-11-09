@@ -49,6 +49,7 @@ class Post extends Component {
                         user: this.props.user,
                         postPhoto: this.props.image,
                         date: regDateString,
+                        likes: this.state.likes
                     }
                 }}>
                     <div className={classes.Body}><img src={this.props.image} alt=""/></div>

@@ -13,6 +13,7 @@ class Posts extends Component {
     }
 
     componentDidMount() {
+
         const localToken = checkLocalToken()
         if (localToken) {
             unsplash.auth.setBearerToken(localStorage.getItem('token'));
@@ -45,6 +46,7 @@ class Posts extends Component {
     }
 
     getPosts = (clear = false) => {
+        if (clear) this.props.onClearPosts()
         unsplash.photos.listPhotos(clear ? 1 : this.state.page, 30, "latest")
             .then(toJson)
             .then(posts => {
@@ -66,7 +68,6 @@ class Posts extends Component {
                 }
                 if (clear) {
                     this.setState({page: 2})
-                    this.props.onClearPosts();
                     this.props.onAddPosts(myPosts);
                 } else {
                     this.setState({page: this.state.page + 1});
