@@ -3,3 +3,5 @@
 [1014/114909.455:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
 [1014/202448.659:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
 [1015/163217.529:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1108/112951.543:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1108/112951.546:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\mali_sarus_idol\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\d2b33086-0fbe-4b17-b0d0-c92acd960b58: Системе не удается найти указанный путь. (0x3)

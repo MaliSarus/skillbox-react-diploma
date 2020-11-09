@@ -16,7 +16,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 posts: updatedPosts
             }
-        case  actionType.CLEAR_POSTS:
+        case actionType.CLEAR_POSTS:
             return {
                 ...state,
                 posts: []

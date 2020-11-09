@@ -3,7 +3,6 @@ import classes from './Header.module.scss'
 import logo from '../../logo.svg'
 import {Link} from "react-router-dom";
 import {connect} from 'react-redux'
-import * as actionCreators from "../../store/actionCreators/actionCreators";
 
 class Header extends Component {
 

@@ -1,4 +1,4 @@
-import Unsplash, {toJson} from "unsplash-js";
+import Unsplash from "unsplash-js";
 
 export const unsplash = new Unsplash({
     accessKey: "NoZ3Xj6EmhgafvdAT6G5I_NXKAnO3xU3TkUTtV7vvtM",
@@ -29,5 +29,32 @@ export const checkAuth = () => {
     else{
         return  false;
     }
+}
 
+export  const checkUrlToken = () => {
+    const token = checkAuth();
+    if (token) {
+        return token
+    } else {
+        return false
+    }
+}
+
+export const checkLocalToken = () => {
+    let lsToken = localStorage.getItem('token');
+    let expirationDate = localStorage.getItem('tokenExpiration');
+    if (lsToken) {
+        if (new Date().getTime() > +expirationDate) {
+            localStorage.removeItem('token');
+            localStorage.removeItem(('tokenExpiration'))
+            lsToken = undefined;
+            expirationDate = undefined;
+            return false
+        } else {
+            return true
+        }
+    }
+    if (!lsToken) {
+        return false
+    }
 }
